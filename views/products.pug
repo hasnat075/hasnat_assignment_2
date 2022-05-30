@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  ul
+  each val in products
+    li= `Name : ${val.name}, Type: ${val.type}`
+        a(href=`http://localhost:3000/products/edit/${val._id}`)
+            button Edit 
+        a(href=`http://localhost:3000/products/delete/${val._id}`)
+            button Delete 
+        a(href=`http://localhost:3000/products/details/${val._id}`)
+            button Details
+  
+  a(href="http://localhost:3000/products/add")  
+    button Add Record
+    

@@ -1,0 +1,10 @@
+extends layout 
+
+block content 
+
+    h3= "Title: "+_doc.name
+    h3= "Price: " +_doc.price
+    h3= "Type: "+_doc.type
+
+    a(href="/products")
+        button Back to Home 

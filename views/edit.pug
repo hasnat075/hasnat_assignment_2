@@ -1,0 +1,20 @@
+extends layout
+
+block content
+     .container 
+        form(action="/products/edit" method="post")
+            div.form-group
+                label(for="name") Name
+                input(type="text" ,class="form-control" ,id="name", value= product.name  ,name="name" ,placeholder="Enter Name" ,required)
+            br
+            div.form-group
+                label(for="type") Type
+                input(type="text" ,class="form-control" ,id="type" ,name="type" ,value = product.type,placeholder="Type",required)
+            br
+            div.form-group
+                label(for="price") Price
+                input(type="number", value= product.price ,class="form-control" ,id="price",name="price" ,placeholder="Price",required)
+            br
+            div.form-group
+                input(type="text", hidden ,value= product._id ,class="form-control"  ,name='id',required)
+            button.btn.btn-primary(type="submit") Update
