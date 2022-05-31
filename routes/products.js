@@ -5,7 +5,6 @@ const Products = require("../models/products");
 /* GET users listing. */
 router.get("/", async (req, res, next) => {
   products = await Products.find();
-  console.log(products);
   res.render("products", products);
 });
 router.get("/add", async (req, res, next) => {
